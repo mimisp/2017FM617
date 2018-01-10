@@ -2,13 +2,14 @@
 ## Quantopian 策略程式
 
 績效：
-Return = 81.33%
-Alpha = 0.08
-Beta = 0.66
-Sharpe = 1.20
-Max Drawdown = -16.81%
+ * Return = 81.33%
+ * Alpha = 0.08
+ * Beta = 0.66
+ * Sharpe = 1.20
+ * Max Drawdown = -16.81%
 
 程式碼：
+
 def initialize(context):
     # In our example, we're looking at Apple.  If you re-type
     # this line you'll see the auto-complete popup after `sid(`.
@@ -16,6 +17,7 @@ def initialize(context):
 
     # Specify that we want the 'rebalance' method to run once a day
     schedule_function(rebalance, date_rule=date_rules.every_day())
+
 
 def vwap(prices, volumes):
     return (prices * volumes).sum() / volumes.sum()
